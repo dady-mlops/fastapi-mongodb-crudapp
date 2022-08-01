@@ -34,4 +34,3 @@ async def update_student(student_id, student: Student):
 @student_router.delete('/students/{student_id}')
 async def delete_student(student_id):
     return student_entity(connection.local.student.find_one_and_delete({"_id": ObjectId(student_id)}))
-
